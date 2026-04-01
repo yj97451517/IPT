@@ -1,7 +1,7 @@
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from bin.utils import read_config, fetch_content, parse_m3u_or_txt, mark_input_invalid, write_file_lines
 from bin.filter import check_url_valid, get_resolution, load_alias, match_channel, load_demo_channels
-from datetime import datetime
+from datetime import datetime, timedelta
 
 def run():
     cfg = read_config()
@@ -53,15 +53,14 @@ def run():
             if url not in all_valid[std_name]:
                 all_valid[std_name].append(url)
 
-    # ====================== 【更新时间 按你要的格式输出】 ======================
-    now_beijing = datetime.utcnow()
+    # 北京时间
+    now_beijing = datetime.utcnow() + timedelta(hours=8)
     update_time = now_beijing.strftime("%Y-%m-%d %H:%M:%S")
 
     live_lines = []
     live_lines.append("📺更新时间,#genre#")
     live_lines.append(update_time)
-    live_lines.append("")  # 空行
-    # ========================================================================
+    live_lines.append("")
 
     for group, channels in demo_groups.items():
         live_lines.append(f"{group},#genre#")
