@@ -1,5 +1,8 @@
+# github 专用 无需上传ffprobe.exe
+
 import subprocess
 import re
+import os
 import requests
 from bin.utils import HEADERS
 
@@ -20,9 +23,15 @@ def check_url_valid(url, timeout=8):
             return False
 
 def get_resolution(url, timeout=8):
-    """使用ffprobe获取分辨率，返回高度（720/1080等）"""
+    """自动识别系统获取分辨率，Windows使用exe，Linux使用ffprobe"""
+    # 自动获取 ffprobe 路径
+    if os.name == "nt":  # Windows
+        ffprobe_path = os.path.join(os.getcwd(), "bin", "ffprobe.exe")
+    else:  # Linux / GitHub Action
+        ffprobe_path = "ffprobe"
+
     command = [
-        "bin/ffprobe.exe",
+        ffprobe_path,
         "-v", "error",
         "-select_streams", "v:0",
         "-show_entries", "stream=height",
@@ -31,7 +40,7 @@ def get_resolution(url, timeout=8):
         url
     ]
     try:
-        res = subprocess.check_output(command, timeout=timeout, text=True)
+        res = subprocess.check_output(command, timeout=timeout, text=True, stderr=subprocess.DEVNULL)
         return int(res.strip()) if res.strip().isdigit() else 0
     except:
         return 0
@@ -54,7 +63,6 @@ def load_alias(path="config/alias.txt"):
         alias_str = alias_part.strip().strip("[]").replace("'", "").replace(" ", "")
         alias_list = alias_str.split(",")
 
-        # 统一小写存储
         for a in alias_list:
             a_clean = a.strip().lower()
             mapping[a_clean] = std_name
