@@ -1,4 +1,4 @@
-name: IPTV直播源自动筛选
+name: IPTV Check
 
 on:
   schedule:
