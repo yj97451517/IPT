@@ -1,0 +1,9 @@
+[DEFAULT]
+# 直播源验证超时时间（秒）
+check_timeout = 10
+# 最低允许分辨率（720=720P，1080=1080P）
+min_resolution = 0
+# 每个频道最多输出多少个源
+max_output_per_channel = 5
+# 并发线程数
+max_workers = 20
