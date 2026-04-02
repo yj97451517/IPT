@@ -1,7 +1,7 @@
 name: IPTV 自动更新
 on:
   schedule:
-    - cron: '0 17 */5 * *'  # 每5天 北京时间 01:00 运行
+    - cron: '0 17 */5 * *'  # 每5天 北京时间 01:00
   workflow_dispatch:        # 手动触发
 
 permissions:
@@ -10,13 +10,12 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 60     # 最多运行1小时自动结束
+    timeout-minutes: 60     # 1小时强制结束
     steps:
       - name: 拉取代码
         uses: actions/checkout@v4
         with:
-          persist-credentials: false
-          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 设置 Python
         uses: actions/setup-python@v5
@@ -29,23 +28,18 @@ jobs:
           sudo apt install -y ffmpeg
           pip install requests
 
-      - name: 创建 output 目录（确保存在）
+      - name: 确保 output 文件夹存在
         run: mkdir -p output
 
       - name: 运行主程序
         run: python main.py
 
-      - name: 查看生成的文件（调试用，可看到是否生成）
+      - name: 查看生成结果
         run: ls -la output/
 
-      - name: 提交并推送结果
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          git add output/lives.txt output/unused.txt
-          
-          git status
-          
-          git diff --quiet || git commit -m "自动更新直播源 $(date +'%Y-%m-%d %H:%M')"
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
+      - name: 提交更新到仓库
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "自动更新直播源 $(date +'%Y-%m-%d %H:%M')"
+          add: "output/lives.txt output/unused.txt"
+          default_author: github_actions
