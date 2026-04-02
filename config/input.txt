@@ -3,5 +3,6 @@ https://gitee.com/OscarWilde/itv/raw/master/tv.txt
 http://api.lmxsd.cn/2485.txt
 http://west.shaonv.me/tvbox/live.txt
 http://gc.gt.tc/c/飞龍.txt
+http://43.251.226.89:8080/live.txt
 
 https://t.freetv.fun/m3u/playlist.txt
