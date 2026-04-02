@@ -1,7 +1,7 @@
-https://t.freetv.fun/m3u/playlist.txt
-
 http://103.163.47.120:555/咪咕.txt
 https://gitee.com/OscarWilde/itv/raw/master/tv.txt
 http://api.lmxsd.cn/2485.txt
 http://west.shaonv.me/tvbox/live.txt
 http://gc.gt.tc/c/飞龍.txt
+
+https://t.freetv.fun/m3u/playlist.txt
