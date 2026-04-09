@@ -55,8 +55,18 @@ def run():
 
     # 北京时间, 不加url_time 时间不显示，后续更新url_time 地址
     now_beijing = datetime.utcnow() + timedelta(hours=8)
-    url_time = "https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/ce11660ee288482b98ee057967349147/main.m3u8?maxbr=2048"
-    update_time = now_beijing.strftime("%Y-%m-%d %H:%M:%S") + "," + url_time
+
+    # 提取第一条有效直播线路
+    first_url = ""
+    for lines in all_valid.values():
+        if lines:
+            first_url = lines[0]
+            break
+
+    # 组合时间 + 第一条线路
+    update_time = now_beijing.strftime("%Y-%m-%d %H:%M:%S")
+    if first_url:  # 有线路才显示
+        update_time = update_time + "," + first_url
 
     live_lines = []
     live_lines.append("📺更新时间,#genre#")
