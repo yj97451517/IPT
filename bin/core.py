@@ -53,9 +53,10 @@ def run():
             if url not in all_valid[std_name]:
                 all_valid[std_name].append(url)
 
-    # 北京时间
+    # 北京时间, 不加url_time 时间不显示，后续更新url_time 地址
     now_beijing = datetime.utcnow() + timedelta(hours=8)
-    update_time = now_beijing.strftime("%Y-%m-%d %H:%M:%S")
+    url_time = "https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/ce11660ee288482b98ee057967349147/main.m3u8?maxbr=2048"
+    update_time = now_beijing.strftime("%Y-%m-%d %H:%M:%S") + "," + url_time
 
     live_lines = []
     live_lines.append("📺更新时间,#genre#")
