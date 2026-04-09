@@ -1,7 +1,7 @@
 name: IPTV 自动更新
 on:
   schedule:
-    - cron: '0 17 */5 * *'  # 每5天 北京时间 01:00
+    - cron: '0 17 */3 * *'  # 每3天 北京时间 01:00
   workflow_dispatch:        # 手动触发
 
 permissions:
