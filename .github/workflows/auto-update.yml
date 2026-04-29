@@ -40,6 +40,6 @@ jobs:
       - name: 提交更新到仓库
         uses: EndBug/add-and-commit@v9
         with:
-          message: "自动更新直播源 $(date +'%Y-%m-%d %H:%M')"
+          message: "自动更新 $(date +'%Y-%m-%d %H:%M')"
           add: "output/lives.txt output/unused.txt config/input.txt"
           default_author: github_actions
