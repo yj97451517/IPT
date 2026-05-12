@@ -2,8 +2,6 @@ https://gitee.com/OscarWilde/itv/raw/master/tv.txt
 http://api.lmxsd.cn/2485.txt
 http://west.shaonv.me/tvbox/live.txt
 http://gc.gt.tc/c/飞龍.txt
-http://fmys.top/lib/tvlive.txt
-
 https://gh-proxy.com/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt
 https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u
 
