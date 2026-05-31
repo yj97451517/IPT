@@ -1,12 +1,11 @@
 http://zczb.aylzline.top:8899/rtp/225.1.2.237:11530
 http://zczb.aylzline.top:8899/rtp/225.1.2.99:10588
-https://t.freetv.fun/live/cctv3-zong-yi-gao-qing.php
-https://t.freetv.fun/live/cctv8-dian-shi-ju-gao-qing.php
-http://222.169.85.8:9901/tsfile/live/0125_1.m3u8?key=txiptv&playlive=1&authid=0
+http://59.39.89.130:60901/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=0
+https://t.freetv.fun/live/cctv7-jun-nong-gao-qing.php
+http://123.130.84.106:8154/tsfile/live/0019_1.m3u8?key=txiptv&playlive=1&authid=0
 http://ali-xwl.cztv.com/live/channel4k2160p.m3u8
-https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8?
 http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jbXMmbm5fdGltZXpvbmU9OCZjZG5leF9pZD1hbF9obHNfbGR2dCZ1dWlkPTliODY4NmU5ZTM2YzYwMmMmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
-http://115.29.208.41/sctv.php?id=1
-https://t.freetv.fun/live/feng-huang-xiang-gang-gao-qing.php
+http://61.136.172.236:9901/tsfile/live/0116_1.m3u8?key=txiptv&playlive=1&authid=0
+http://115.29.208.41/sctv.php?id=10
 http://php.jdshipin.com/TVOD/iptv.php?id=mzt
 https://t.freetv.fun/live/ming-zhu-4.php
