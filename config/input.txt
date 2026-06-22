@@ -5,8 +5,7 @@ http://gc.gt.tc/c/飞龍.txt
 http://wangziduoqing.com/yuan/zb.txt
 https://gh-proxy.com/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt
 https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u
-https://codeberg.org/Jsnzkpg/Jsnzkpg/raw/Jsnzkpg/Jsnzkpg1.m3u
-
+# https://codeberg.org/Jsnzkpg/Jsnzkpg/raw/Jsnzkpg/Jsnzkpg1.m3u
 # 下面尽量不要删除
 https://live.zbds.top/tv/iptv4.txt
 https://dsj-1312694395.cos.ap-guangzhou.myqcloud.com/dsj10.1.txt
