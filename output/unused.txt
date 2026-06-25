@@ -1,4 +1,8 @@
 http://tv.groupshare.com.cn/fhtv?id=cn
+http://219.145.93.74:10000/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0$陕西电信酒店
+http://49.232.143.177:80/pyxg/export.php?id=1&key=****
+https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8?
+http://php.jdshipin.com/TVOD/iptv.php?id=fhhk
+http://49.232.143.177:80/pyxg/export.php?id=3&key=****
 http://tv.groupshare.com.cn/fhtv?id=info
-http://tv.groupshare.com.cn/fhtv?id=hk
-http://php.jdshipin.com/TVOD/iptv.php?id=mzt
+http://49.232.143.177:80/pyxg/export.php?id=2&key=****
